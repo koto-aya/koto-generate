@@ -17,7 +17,7 @@ import java.io.Writer;
  */
 public class DynamicGenerator {
     public static void main(String[] args) throws IOException, TemplateException {
-        doGenerate("acm/MainTemplate.java.ftl","temp/MainTemplate.java");
+        doGenerate("acm/MainTemplate.java.ftl","temp/MainTemplate.java",null);
     }
 
     /**
@@ -25,14 +25,10 @@ public class DynamicGenerator {
      * @param templateName 模板文件名
      * @param outputPath 输出路径
      */
-    public static void doGenerate(String templateName,String outputPath) throws IOException, TemplateException {
+    public static void doGenerate(String templateName,String outputPath,Object data) throws IOException, TemplateException {
         Template template = FreeMarkerFactory.getTemplate(templateName);
-        AcmModel acmModel=new AcmModel();
-        acmModel.setAuthor("kotoaya");
-        acmModel.setOutputText("求和为：");
-        acmModel.setLoop(true);
         Writer output=new FileWriter(outputPath);
-        template.process(acmModel,output);
+        template.process(data,output);
         output.close();
     }
 }
