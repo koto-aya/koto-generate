@@ -1,0 +1,54 @@
+{
+  "name": "acm-template-pro-generator",
+  "description": "ACM示例模板生成器",
+  "basePackage": "com.xiwu",
+  "version": "1.0",
+  "author": "夕雾" ,
+  "createTime": "2024-07-13",
+  "fileConfig": {
+    "inputRootPath": "E:/project/koto-generator/koto-generator-demo-project/acm-template",
+    "outputRootPath": "E:/project/koto-generator/koto-generator-maker/generated/acm",
+    "type": "dir",
+    "files": [
+      {
+        "inputPath": "src/com/xiwu/acm/MainTemplate.java.ftl",
+        "outputPath": "src/com/xiwu/acm/MainTemplate.java",
+        "type": "file",
+        "generateType": "dynamic"
+      },{
+        "inputPath": ".gitignore",
+        "outputPath": ".gitignore",
+        "type": "file",
+        "generateType": "static"
+      },{
+        "inputPath": "README.md",
+        "outputPath": "README.md",
+        "type": "file",
+        "generateType": "static"
+      }
+    ]
+  },
+  "modelConfig": {
+    "models": [
+      {
+        "fieldName": "loop",
+        "type": "boolean",
+        "description": "是否生成循环(true/false)",
+        "defaultValue": false,
+        "abbr": "l"
+      },{
+        "fieldName": "author",
+        "type": "String",
+        "description": "作者注释",
+        "defaultValue": "夕雾",
+        "abbr": "a"
+      },{
+        "fieldName": "outputText",
+        "type": "String",
+        "description": "输出信息",
+        "defaultValue": "sum=",
+        "abbr": "o"
+      }
+    ]
+  }
+}
