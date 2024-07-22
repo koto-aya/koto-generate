@@ -4,37 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a52a15c2-24d9-4d5d-8482-25d443ab98f3" name="Changes" comment="picocli整合">
-      <change afterPath="$PROJECT_DIR$/koto-generator-demo-project/acm-template/src/com/xiwu/acm/MainTemplate.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/cli/CommandExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/cli/command/ConfigCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/cli/command/GenerateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/cli/command/ListCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/config/FreeMarkerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/generator/DynamicGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/generator/JarGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/generator/MainGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/generator/ScriptGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/generator/StaticGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/meta/Meta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/meta/MetaManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/java/com/kotoaya/maker/model/DataModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/meta.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/Main.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/cli/CommandExecutor.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/cli/command/ConfigCommand.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/cli/command/GenerateCommand.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/cli/command/ListCommand.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/config/FreeMarkerFactory.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/generator/DynamicGenerator.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/generator/MainGenerator.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/generator/StaticGenerator.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/java/model/DataModel.java.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koto-generator-maker/src/main/resources/templates/pom.xml.ftl" afterDir="false" />
+    <list default="true" id="a52a15c2-24d9-4d5d-8482-25d443ab98f3" name="Changes" comment="制作工具开发，通过元信息生成代码生成器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koto-generator-demo-project/acm-template/src/com/koto/acm/MainTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/koto-generator-demo-project/acm-template/src/com/xiwu/acm/MainTemplate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,21 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "E:/project/koto-generator/koto-generator-demo-project/acm-template/src/com/xiwu/acm",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "proofread"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project/koto-generator/koto-generator-demo-project/acm-template/src/com/xiwu/acm&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\project\koto-generator\koto-generator-demo-project\acm-template\src\com\xiwu\acm" />
@@ -175,6 +146,8 @@
       <workItem from="1721235845412" duration="40000" />
       <workItem from="1721236529217" duration="17000" />
       <workItem from="1721236574956" duration="87000" />
+      <workItem from="1721237594763" duration="609000" />
+      <workItem from="1721311297423" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目，编写要生成的acm实例模板">
       <created>1720279923399</created>
@@ -197,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720627908673</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="制作工具开发，通过元信息生成代码生成器">
+      <created>1721237659922</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721237659922</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +198,7 @@
     <MESSAGE value="创建项目，编写要生成的acm实例模板" />
     <MESSAGE value="动静结合生成" />
     <MESSAGE value="picocli整合" />
-    <option name="LAST_COMMIT_MESSAGE" value="picocli整合" />
+    <MESSAGE value="制作工具开发，通过元信息生成代码生成器" />
+    <option name="LAST_COMMIT_MESSAGE" value="制作工具开发，通过元信息生成代码生成器" />
   </component>
 </project>

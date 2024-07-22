@@ -25,6 +25,8 @@ public class MetaManager {
         //读取meta.json内容，并将读取到的json数据转换为java对象
         String metaJson = ResourceUtil.readUtf8Str("meta.json");
         Meta meta = JSONUtil.toBean(metaJson, Meta.class);
+        //校验和处理默认值
+        MetaValidator.doValidAndFill(meta);
         return meta;
     }
 }

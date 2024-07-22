@@ -32,8 +32,4 @@ public class JarGenerator {
         int exitCode = process.waitFor();//调用命令，得到退出码
         System.out.println(exitCode);
     }
-
-    public static void main(String[] args) throws IOException, InterruptedException {
-        doGenerator("E:\\project\\koto-generator\\koto-generator-maker\\generated");
-    }
 }

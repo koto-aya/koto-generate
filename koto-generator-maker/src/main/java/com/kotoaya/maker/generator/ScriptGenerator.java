@@ -27,8 +27,8 @@ public class ScriptGenerator {
             Set<PosixFilePermission> permissions = PosixFilePermissions.fromString("rwxrwxrwx");
             //给对应文件添加权限
             Files.setPosixFilePermissions(Paths.get(outputPath),permissions);
-        } catch (IOException ignored) {
-
+        } catch (Exception ignored) {
+            System.out.println("检测到非类Unix系统");
         }finally {
             //Windows脚本
             sb=new StringBuilder();

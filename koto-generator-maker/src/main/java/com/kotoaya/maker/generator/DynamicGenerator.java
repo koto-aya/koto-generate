@@ -16,10 +16,6 @@ import java.io.Writer;
  * @author wzw
  */
 public class DynamicGenerator {
-    public static void main(String[] args) throws IOException, TemplateException {
-        doGenerate("acm/MainTemplate.java.ftl","temp/MainTemplate.java",null);
-    }
-
     /**
      * 动态生成文件
      * @param inputPath 输入路径

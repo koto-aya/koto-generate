@@ -18,11 +18,24 @@ public class MainGenerator {
         Meta meta = MetaManager.getMeta();
         //输出的根路径
         String rootPath = System.getProperty("user.dir");
-        String outputPath = rootPath + File.separator + "generated";
+        String outputPath = rootPath + File.separator + "generated/acm-template-pro";
+        //精简版路径
+        String distOutputPath=outputPath+"-dist";
         //如果这个目录不存在，就创建目录
         if (!FileUtil.exist(outputPath)) {
             FileUtil.mkdir(outputPath);
         }
+        if (!FileUtil.exist(distOutputPath)){
+            FileUtil.mkdir(distOutputPath);
+        }
+
+        //从原始文件模板路径复制到生成的代码包中
+        String sourceRootPath= meta.getFileConfig().getSourceRootPath();//模板文件所在的原始路径
+        String sourceCopyDestPath=outputPath+File.separator+".source";
+        FileUtil.copy(sourceRootPath,sourceCopyDestPath,false);
+        //复制一份到精简包中
+        FileUtil.copy(sourceCopyDestPath,distOutputPath,false);
+
         //读取resources目录
         ClassPathResource classPathResource = new ClassPathResource("");
         String inputResourcePath = classPathResource.getAbsolutePath();
@@ -78,14 +91,25 @@ public class MainGenerator {
         inputFilePath=inputResourcePath+File.separator+"templates/pom.xml.ftl";
         outputFilePath=outputPath+File.separator+"pom.xml";
         DynamicGenerator.doGenerate(inputFilePath,outputFilePath,meta);
+        //README
+        inputFilePath=inputResourcePath+File.separator+"templates/README.md.ftl";
+        outputFilePath=outputPath+File.separator+"README.md";
+        DynamicGenerator.doGenerate(inputFilePath,outputFilePath,meta);
+
         //构建jar包
         JarGenerator.doGenerator(outputPath);
-
-        //输出脚本路径
-        String outputScriptPath=outputPath+File.separator+"generator";
         //jar包名称
         String jarName = meta.getName() + "-" + meta.getVersion() + "-jar-with-dependencies.jar";
-        String jarPath="target/"+jarName;
+        String jarPath=outputPath+File.separator+"target/"+jarName;
+        //输出脚本路径
+        String outputScriptPath=outputPath+File.separator+"generator";
         ScriptGenerator.doGenerator(outputScriptPath,jarPath);
+        //将jar包和脚本文件复制到精简包中
+        FileUtil.copy(jarPath,distOutputPath,false);
+        jarPath=distOutputPath+File.separator+jarName;
+        String outputDistScriptPath=distOutputPath+File.separator+"generator";
+        ScriptGenerator.doGenerator(outputDistScriptPath,jarPath);
+        //将readme文件复制到精简包中
+        FileUtil.copy(outputPath+File.separator+"README.md",distOutputPath,true);
     }
 }

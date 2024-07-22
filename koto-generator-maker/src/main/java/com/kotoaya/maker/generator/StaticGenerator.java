@@ -12,13 +12,6 @@ import java.io.File;
 public class StaticGenerator {
     //项目的根路径
     private static final String ROOT_PATH=System.getProperty("user.dir");
-    public static void main(String[] args) {
-        //输入路径
-        String inputPath=ROOT_PATH+ File.separator+"koto-generator-demo-project"+File.separator+"acm-template";
-        //输出路径
-        String outputPath=ROOT_PATH+File.separator+"temp";
-        copyFileByRecursive(new File(inputPath),new File(outputPath));
-    }
 
     /**
      * 通过hutool工具类静态生成文件

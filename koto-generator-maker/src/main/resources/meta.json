@@ -6,8 +6,9 @@
   "author": "夕雾" ,
   "createTime": "2024-07-13",
   "fileConfig": {
-    "inputRootPath": "E:/project/koto-generator/koto-generator-demo-project/acm-template",
-    "outputRootPath": "E:/project/koto-generator/koto-generator-maker/generated/acm",
+    "inputRootPath": ".source/acm-template",
+    "outputRootPath": "generated/acm",
+    "sourceRootPath": "E:/project/koto-generator/koto-generator-demo-project/acm-template",
     "type": "dir",
     "files": [
       {
